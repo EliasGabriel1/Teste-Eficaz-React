@@ -8,56 +8,56 @@ import GlobalStyle from "../../Components/styles/global"
 
 
 export default function Cadastro() {
-    function handleClick() {
-    if (
-      document.forms[0].email.value === "" ||
-      document.forms[0].email.value.indexOf("@") === -1 ||
-      document.forms[0].email.value.indexOf(".") === -1
-    ) {
-      alert("Por favor, informe um E-MAIL válido!");
-      return false;
-    }
-    var seu_email = document.getElementById("seu_email").value;
-    var nome = document.getElementById("nome").value;
-    var Email = document.getElementById("Email").value;
-    var telefone = document.getElementById("telefone").value;
-    var rua = document.getElementById("rua").value;
-    var numero = document.getElementById("numero").value;
-    var complemento = document.getElementById("complemento").value;
-    var bairro = document.getElementById("bairro").value;
-    var cidade = document.getElementById("cidade").value;
-    var uf = document.getElementById("uf").value;
-    var cep = document.getElementById("CEP").value;
+//     function handleClick() {
+//     if (
+//       document.forms[0].email.value === "" ||
+//       document.forms[0].email.value.indexOf("@") === -1 ||
+//       document.forms[0].email.value.indexOf(".") === -1
+//     ) {
+//       alert("Por favor, informe um E-MAIL válido!");
+//       return false;
+//     }
+//     var seu_email = document.getElementById("seu_email").value;
+//     var nome = document.getElementById("nome").value;
+//     var Email = document.getElementById("Email").value;
+//     var telefone = document.getElementById("telefone").value;
+//     var rua = document.getElementById("rua").value;
+//     var numero = document.getElementById("numero").value;
+//     var complemento = document.getElementById("complemento").value;
+//     var bairro = document.getElementById("bairro").value;
+//     var cidade = document.getElementById("cidade").value;
+//     var uf = document.getElementById("uf").value;
+//     var cep = document.getElementById("CEP").value;
   
-    const data = {
-      seu_email: seu_email,
-      nome: nome,
-      email: Email,
-      telefone: telefone,
-      rua: rua,
-      número: numero,
-      complemento: complemento,
-      bairro: bairro,
-      cidade: cidade,
-      uf: uf,
-      cep: cep,
-    };
+//     const data = {
+//       seu_email: seu_email,
+//       nome: nome,
+//       email: Email,
+//       telefone: telefone,
+//       rua: rua,
+//       número: numero,
+//       complemento: complemento,
+//       bairro: bairro,
+//       cidade: cidade,
+//       uf: uf,
+//       cep: cep,
+//     };
   
-    fetch("https://estagio.eficazmarketing.com/api/user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        alert("Success:");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
+//     fetch("https://estagio.eficazmarketing.com/api/user", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(data),
+//     })
+//       .then((response) => response.json())
+//       .then((data) => {
+//         alert("Success:");
+//       })
+//       .catch((error) => {
+//         console.error("Error:", error);
+//       });
+//   };
   
   return (
     <div className="container-main Cadastro">
